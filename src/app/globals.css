@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 11.8%;
+    --foreground: 0 0% 87.8%;
+    --card: 0 0% 17.3%;
+    --card-foreground: 0 0% 87.8%;
+    --popover: 0 0% 17.3%;
+    --popover-foreground: 0 0% 87.8%;
+    --primary: 174 45% 51%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 87.8%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 36 100% 65%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 174 45% 51%;
+    --radius: 0.5rem;
+    --chart-1: 174 45% 51%;
+    --chart-2: 36 100% 65%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  /*
+    Add your @font-face rule for 'Zalando Sans Expanded' here.
+    For example:
+    @font-face {
+      font-family: 'Zalando Sans Expanded';
+      src: url('/fonts/ZalandoSansExpanded-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+    }
+  */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .glassmorphism {
+    background: rgba(28, 28, 28, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .bg-stars {
+    background-color: hsl(var(--background));
+    background-image:
+      radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60%),
+      /* near stars */
+      radial-gradient(circle at top left, hsl(var(--primary) / 0.5), transparent),
+      radial-gradient(circle at bottom right, hsl(var(--accent) / 0.5), transparent),
+      /* starfield */
+      radial-gradient(1px 1px at 20px 30px, white, transparent),
+      radial-gradient(1px 1px at 40px 70px, white, transparent),
+      radial-gradient(1px 1px at 50px 160px, white, transparent),
+      radial-gradient(1px 1px at 90px 40px, white, transparent),
+      radial-gradient(1px 1px at 130px 80px, white, transparent),
+      radial-gradient(1px 1px at 160px 120px, white, transparent);
+    animation: star-glow 5s ease-in-out infinite alternate;
+  }
+
+  @keyframes star-glow {
+    from {
+      background-image:
+        radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60%),
+        radial-gradient(circle at top left, hsl(var(--primary) / 0.5), transparent),
+        radial-gradient(circle at bottom right, hsl(var(--accent) / 0.5), transparent),
+        radial-gradient(1px 1px at 20px 30px, white, transparent),
+        radial-gradient(1px 1px at 40px 70px, white, transparent),
+        radial-gradient(1px 1px at 50px 160px, white, transparent),
+        radial-gradient(1px 1px at 90px 40px, white, transparent),
+        radial-gradient(1px 1px at 130px 80px, white, transparent),
+        radial-gradient(1px 1px at 160px 120px, white, transparent);
+    }
+    to {
+      background-image:
+        radial-gradient(ellipse at center, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 60%),
+        radial-gradient(circle at top right, hsl(var(--primary) / 0.6), transparent),
+        radial-gradient(circle at bottom left, hsl(var(--accent) / 0.6), transparent),
+        radial-gradient(1px 1px at 20px 30px, white, transparent),
+        radial-gradient(1px 1px at 40px 70px, white, transparent),
+        radial-gradient(1px 1px at 50px 160px, white, transparent),
+        radial-gradient(1px 1px at 90px 40px, white, transparent),
+        radial-gradient(1px 1px at 130px 80px, white, transparent),
+        radial-gradient(1px 1px at 160px 120px, white, transparent);
+    }
+  }
+}
