@@ -18,6 +18,7 @@ import {
 import { useToast } from '@/hooks/use-toast';
 import { handleDashboardAiChat } from '@/app/actions';
 import { Card, CardContent } from '../ui/card';
+import { MarkdownContent } from '../markdown-content';
 
 
 type Message = {
@@ -136,7 +137,11 @@ export function DashboardChat({ mode, context }: DashboardChatProps) {
                         : 'bg-background'
                     )}
                   >
-                    {message.content}
+                    {message.role === 'assistant' ? (
+                      <MarkdownContent content={message.content} />
+                    ) : (
+                      message.content
+                    )}
                   </div>
                   {message.role === 'user' && (
                     <Avatar className="w-8 h-8">

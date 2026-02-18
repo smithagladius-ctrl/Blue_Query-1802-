@@ -2,8 +2,7 @@
 'use client';
 
 import { useState, useRef, useEffect, useTransition } from 'react';
-import { Bot, User, Send, Mic, Download, Loader2, ChevronsRight } from 'lucide-react';
-import ReactMarkdown from 'react-markdown';
+import { Bot, User, Send, Mic, Download, Loader2 } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { ScrollArea } from './ui/scroll-area';
@@ -12,7 +11,8 @@ import { cn } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
 import { useSpeechRecognition } from '@/hooks/use-speech-recognition';
 import { handleAiChat } from '@/app/actions';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Card, CardContent } from './ui/card';
+import { MarkdownContent } from './markdown-content';
 
 type Message = {
   id: string;
@@ -27,22 +27,6 @@ const sampleQueries = [
   'Find nearest ARGO floats to 15°N, 90°E',
   'Generate a report on temperature anomalies in the North Atlantic.',
 ];
-
-const MarkdownComponents: object = {
-  h3: ({ node, ...props }: any) => <h3 className="mt-4 mb-2 text-lg font-semibold" {...props} />,
-  ul: ({ node, ...props }: any) => <ul className="list-none space-y-2" {...props} />,
-  li: ({ node, ...props }: any) => (
-    <li className="flex items-start">
-      <ChevronsRight className="h-4 w-4 mr-2 mt-1 text-primary flex-shrink-0" />
-      <span {...props} />
-    </li>
-  ),
-  blockquote: ({ node, ...props }: any) => (
-    <blockquote className="mt-2 border-l-2 border-primary pl-4 italic text-muted-foreground" {...props} />
-  ),
-  p: ({ node, ...props }: any) => <p className="mb-2" {...props} />,
-};
-
 
 export function ChatInterface() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -198,9 +182,7 @@ export function ChatInterface() {
                 )}
               >
                  {message.role === 'assistant' ? (
-                  <ReactMarkdown components={MarkdownComponents}>
-                    {message.content}
-                  </ReactMarkdown>
+                  <MarkdownContent content={message.content} />
                 ) : (
                   <p>{message.content}</p>
                 )}
