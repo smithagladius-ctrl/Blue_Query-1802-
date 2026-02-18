@@ -91,7 +91,7 @@ export function ChatInterface() {
         if (result.reportDataUri) {
           const link = document.createElement('a');
           link.href = result.reportDataUri;
-          link.download = 'blue_query_report.pdf';
+          link.download = 'blue_query_report.txt';
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
