@@ -1,0 +1,30 @@
+INFO:     Started server process [28272]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8013 (Press CTRL+C to quit)
+[INFO] Using SQLite database at path: c:\Users\M.Chandra Kiran\Desktop\SIH_Blue_Query-main\backend\database\argo_floats_new.db
+[INFO] Initializing sqlite database...
+[INFO] Database path: c:\Users\M.Chandra Kiran\Desktop\SIH_Blue_Query-main\backend\database\argo_floats_new.db
+[INFO] Opening SQLite database at: c:\Users\M.Chandra Kiran\Desktop\SIH_Blue_Query-main\backend\database\argo_floats_new.db
+[INFO] SQLite database opened successfully
+[INFO] Connected to SQLite database
+[INFO] Starting MCP server...
+[INFO] Server running. Press Ctrl+C to exit.
++-------------------------- Crew Execution Started ---------------------------+
+|                                                                             |
+|  Crew Execution Started                                                     |
+|  Name: OceanCrew-turtle                                                     |
+|  ID: 88944716-463f-4ad9-9c87-cd9abddd97c3                                   |
+|  Tool Args:                                                                 |
+|                                                                             |
+|                                                                             |
++-----------------------------------------------------------------------------+
+
+[EventBus Error] Handler 'on_agent_logs_started' failed for event 'AgentLogsStartedEvent': 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
+[EventBus Error] Handler 'on_llm_call_started' failed for event 'LLMCallStartedEvent': 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
+[EventBus Error] Handler 'on_llm_call_failed' failed for event 'LLMCallFailedEvent': 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
+[EventBus Error] Handler 'on_task_failed' failed for event 'TaskFailedEvent': 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
+[EventBus Error] Handler 'on_crew_failed' failed for event 'CrewKickoffFailedEvent': 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
++------------------------- Trace Batch Finalization --------------------------+
+| \u274c Error finalizing trace batch: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+INFO:     127.0.0.1:51582 - "POST /query HTTP/1.1" 500 Internal Server Error

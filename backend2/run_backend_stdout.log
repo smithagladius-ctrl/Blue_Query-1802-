@@ -1,0 +1,20 @@
+INFO:     127.0.0.1:57650 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57656 - "POST /query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53915 - "POST /query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51470 - "POST /query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51147 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51147 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51147 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50271 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50271 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55814 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54038 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54038 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52666 - "POST /query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61260 - "POST /plan-diet?diet_type=both HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61260 - "POST /plan-diet?diet_type=both HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61260 - "POST /plan-diet?diet_type=both HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61632 - "POST /plan-diet?diet_type=both&region=South HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56107 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64076 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64076 - "GET /openapi.json HTTP/1.1" 200 OK
